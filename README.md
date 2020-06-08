@@ -14,7 +14,8 @@ agresseurs dans un attribut privé de type `Collection`.  Par exemple :
 ```java
 private void estFrappe(Gladiateur agresseur) {
     this.agresseurs.add(agresseur);
-}```
+}
+```
 
 De plus, on redéfinira `Gladiateur::donnerRapport` dans `Mirmillon` de telle
 sorte à ce que chaque mirmillon donne la liste des gladiateurs qui ont réussi à
@@ -23,7 +24,8 @@ le frapper, comme ceci :
 public String donnerRapport() {
     return super.donnerRapport() + "\nAgresseurs : " +
            Arrays.toString(agresseurs.toArray());
-}```
+}
+```
 
 ### La méthode `Retiaire::getModificateurCoupRecu`
 Dans le sujet, il est indiqué que les coups portés à un rétiaire voient leur
@@ -35,7 +37,8 @@ donc plus simple d'avoir une méthode comme ceci :
 ```java
 protected int getModificateurCoupRecu() {
      return -agilite;
-}```
+}
+```
 Dans `Gladiateur` (et par extension `Mirmillon`), on se contentera de retourner
 0.
 
